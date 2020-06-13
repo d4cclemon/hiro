@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Member>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<table class="table">
+    <tr>
+        <th>指名</th><th>メールアドレス</th><th>誕生日</th><th>既婚</th><th>備考</th>
+    </tr>
+    @foreach (var item in Model)
+	{
+        <tr>
+            <th>@item.Name</th>
+            <th>@item.EMail</th>
+            <th>@item.Birth</th>
+            <th>@item.Married</th>
+            <th>@item.Memo</th>
+        </tr>
+	}
+</table>
